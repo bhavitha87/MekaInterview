@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "UserDetails";
+}
+
+<h2>UserDetails</h2>
+
+@{
+    var userDetails = TempData["UserDetails"] as MekaShron.Models.Response;
+    if (userDetails != null)
+    {
+        <div>
+            <p>First Name : @userDetails.FirstName</p>
+        </div>
+        <div>
+            <p>Last Name : @userDetails.LastName</p>
+        </div>
+        <div>
+            <p>Company : @userDetails.Company</p>
+        </div>
+    }
+}
